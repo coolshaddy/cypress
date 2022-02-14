@@ -14,8 +14,8 @@ schedules:
 variables:
 - ${{ if eq(variables['build.SourceBranchName'], 'main') }}:
   - group: vargroup-main
-- ${{ if ne(variables['build.SourceBranchName'], 'main') }}:
-  - group: vargroup-dev
+#- ${{ if ne(variables['build.SourceBranchName'], 'main') }}:
+#  - group: vargroup-dev
 - name: npm_config_cache
   value: $(Pipeline.Workspace)/.npm
 - name: CYPRESS_CACHE_FOLDER # Overrides the default cache location
