@@ -12,9 +12,9 @@ schedules:
     - dev
 
 variables:
-- ${{ if eq(variables['build.SourceBranchName'], 'master') }}:
-  - group: vargroup-master
-- ${{ if ne(variables['build.SourceBranchName'], 'master') }}:
+- ${{ if eq(variables['build.SourceBranchName'], 'main') }}:
+  - group: vargroup-main
+- ${{ if ne(variables['build.SourceBranchName'], 'main') }}:
   - group: vargroup-dev
 - name: npm_config_cache
   value: $(Pipeline.Workspace)/.npm
