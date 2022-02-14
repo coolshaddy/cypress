@@ -1,7 +1,7 @@
 name: 'Cypress E2E Testing'
 
 trigger:
-- master
+- main
 - dev
 
 schedules:
